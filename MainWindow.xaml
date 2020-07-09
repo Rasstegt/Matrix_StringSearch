@@ -1,0 +1,36 @@
+﻿<Window x:Class="MatrixSearch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatrixSearch"
+        mc:Ignorable="d"
+        Title="Super Saiyan 5" Height="222" Width="auto" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" d:DesignWidth="450" FontFamily="Bahnschrift SemiLight Condensed" FontSize="24" Icon="/icon.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/mainWindow.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+
+    <DockPanel>
+        <DockPanel.Background>
+            <ImageBrush/>
+        </DockPanel.Background>
+        <Label DockPanel.Dock="Top" Foreground="White" Background="#FF26212B" Opacity="0.735" Cursor="Arrow" OpacityMask="#FF090000" BorderBrush="White" FontFamily="Bahnschrift SemiLight Condensed" Content="                               M@tr1x Generator" Height="auto" Width="auto"/>
+        <StackPanel DockPanel.Dock="Right">
+            <GroupBox Opacity="0.9" Style="{DynamicResource groupbox}" Padding="3,5" BorderBrush="White" Foreground="White" FontFamily="Bahnschrift SemiLight Condensed">
+                <StackPanel>
+                    <Button Style="{DynamicResource langBtn}"  BorderBrush="{x:Null}" Click="changeLanguage"/>
+                    <Button Style="{DynamicResource howBtn}"  BorderBrush="{x:Null}"/>
+                    <Button Style="{DynamicResource authorBtn}" BorderBrush="{x:Null}"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <Grid DockPanel.Dock="Left">
+            <Label Style="{DynamicResource sizeLabel}" Margin="29,51,205,91" Opacity="0.9" Padding="0" FontSize="24" Foreground="White" Background="{x:Null}" FontFamily="Bahnschrift SemiLight Condensed"></Label>
+            <TextBox x:Name="boxForSize" Padding="0" Margin="159,51,43,91" FontFamily="Bahnschrift SemiLight Condensed" Background="White"/>
+            <Button x:Name="generateBtn" Style="{DynamicResource genBtn}" Opacity="0.8" Click="generate" Foreground="White" FontFamily="Bahnschrift SemiLight Condensed">
+            </Button>
+        </Grid>
+    </DockPanel>
+
+</Window>
+    

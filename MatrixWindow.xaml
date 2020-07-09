@@ -1,0 +1,27 @@
+﻿<Window x:Class="MatrixSearch.MatrixWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatrixSearch"
+        mc:Ignorable="d"
+        Title="Super Saiyan 5" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" WindowState="Normal" Height="134" ResizeMode="NoResize" FontFamily="Bahnschrift SemiLight Condensed" FontSize="24" d:DesignWidth="416.933" Icon="/icon.png">
+    <Window.Background>
+        <ImageBrush Stretch="UniformToFill" ImageSource="/matrixWindow.jpg"/>
+    </Window.Background>
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Grid.IsSharedSizeScope="True" ScrollViewer.CanContentScroll="True" SnapsToDevicePixels="True" Height="Auto" Width="Auto" Margin="5 10">
+            <TextBlock x:Name="matrixOut" Opacity="0.8" HorizontalAlignment="Center" Height="Auto" TextWrapping="Wrap" VerticalAlignment="Center" Width="Auto" FontSize="14" Background="Black" Foreground="White"/>
+        </Grid>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Vertical" Height="70" Width="Auto">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="auto" Width="auto" Opacity="0.65" Background="#FF060000">
+                <Label Style="{DynamicResource searchLabel}"  Height="auto" FontSize="18" Foreground="White"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="backButton" Style="{DynamicResource backBtn}" Width="100" Height="auto" Click="backButton_Click" BorderBrush="{x:Null}"></Button>
+                <TextBox x:Name="searchText" Margin="30 0" TextWrapping="Wrap" Width="134" Height="25" BorderBrush="Black" SelectionBrush="#FF5704A2" FontSize="20"/>
+                <Button x:Name="searchButton" Style="{DynamicResource searchBtn}" FontSize="24" Width="100" Height="auto" Click="search_click" BorderBrush="{x:Null}"/>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>
